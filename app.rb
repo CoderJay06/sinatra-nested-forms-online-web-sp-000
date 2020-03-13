@@ -11,6 +11,10 @@ module FormsLab
     get '/new' do 
       erb :'pirates/new'
     end 
+    
+    post '/pirates' do 
+      status 200 
+    end 
 
     post '/pirates' do 
       
@@ -25,12 +29,6 @@ module FormsLab
       
       erb :'pirates/show'
     end 
-    
-    post '/pirates' do 
-      erb :'pirates/show'
-    end 
-    
-    
 
 
   end
