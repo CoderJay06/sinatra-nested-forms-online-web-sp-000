@@ -1,22 +1,18 @@
-<h1>Display your Pirate here</h1>
-<div class="pirate">
-   <h3>Pirate: <%= @pirate.name %></h3><br>
-   <h3>Pirate Height: <%= @pirate.height %></h3><br>
-   <h3>Pirate Weight: <%= @pirate.weight %></h3><br>
-</div>
-
-<h2>Display your first ship here</h2>
-<div class="ship">
-    <p>Ship Name: <%= ship.name %></p><br>
-    <p>Ship Type: <%= ship.type %></p><br>
-    <p>Ship Booty: <%= ship.booty %></p><br>
-  </div><br>
-<% end %>
-
-<h2>Display your second ship here</h2>
-<div class="ship">
-    <p>Ship Name: <%= ship.name %></p><br>
-    <p>Ship Type: <%= ship.type %></p><br>
-    <p>Ship Booty: <%= ship.booty %></p><br>
-  </div><br>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Display your pirate here</h2>
+    
+    <%= @pirate.name %> 
+    
+    <h2>Ships</h2>
+    <ul>
+      <% @pirate.ships.each_with_index do |ship, index| %>
+      <li><%= index + 1 %></li>
+        <li>Name: <%= ship.name %></li>
+        <li>Type: <%= ship.type %></li>
+        <li>Booty: <%= ship.booty %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
