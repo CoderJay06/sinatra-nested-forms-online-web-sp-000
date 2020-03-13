@@ -13,10 +13,6 @@ module FormsLab
     end 
     
     post '/pirates' do 
-      status 200 
-    end 
-
-    post '/pirates' do 
       
       @pirate = Pirate.new(params[:pirate])
 
@@ -28,6 +24,11 @@ module FormsLab
       #binding.pry
       
       erb :'pirates/show'
+    end 
+    
+    
+    post '/pirates' do 
+      status 200 
     end 
 
 
