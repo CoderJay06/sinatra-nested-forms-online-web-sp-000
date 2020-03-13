@@ -13,7 +13,6 @@ module FormsLab
     end 
 
     post '/pirates' do 
-      status 200
       
       @pirate = Pirate.new(params[:pirate])
 
