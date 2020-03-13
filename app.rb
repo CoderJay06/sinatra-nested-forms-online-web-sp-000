@@ -21,7 +21,7 @@ module FormsLab
 
       @ships = Ship.all
       #binding.pry
-    
+      halt 200
       erb :'pirates/show'
     end 
 
